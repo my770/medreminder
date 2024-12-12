@@ -1,0 +1,36 @@
+{
+  "name": "Medication Reminder",
+  "short_name": "Med Reminder",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f8fc",
+  "theme_color": "#004d40",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./Screenshot-wide.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "label": "Wide Screen View",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./Screenshot-narrow.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "label": "Narrow Screen View",
+      "form_factor": "narrow"
+    }
+  ]
+}

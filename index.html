@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A children-friendly medication scheduler app to track paracetamol and ibuprofen doses with reminders, schedules, and timelines. Easy to use and accessible.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Medication Reminder</title>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('Home', this, 'grey')" id="defaultOpen">Medications</button>
+    <button class="tablink" onclick="openPage('meds', this, 'grey')">Schedule</button>
+    <button class="tablink" onclick="openPage('Help', this, 'grey')">Help</button>
+    <button class="tablink" onclick="openPage('About', this, 'grey')">About</button>
+
+<div id="Home" class="tabcontent">
+    <h1>Medication Scheduler</h1>
+    <p style="font-size: 18px; color: #ff7043;">Let's make sure we take care of our little ones on time!</p>
+    <div class="drug-button">
+        <button id="paracetamolButton">Add <strong>Paracetamol</strong></button>
+        <button id="ibuprofenButton">Add <strong>Ibuprofen</strong></button>
+    </div>
+    <form id="medicationForm" style="display: none;">
+        <div id="paracetamolInput" style="display: none;">
+            <label for="paracetamolLastDose">When was the last <strong>Paracetamol</strong> dose?</label>
+            <input type="datetime-local" id="paracetamolLastDose" placeholder="Paracetamol Last Dose" />
+        </div>
+        <hr>
+        <div id="ibuprofenInput" style="display: none;">
+            <label for="ibuprofenLastDose">When was the last <strong>Ibuprofen</strong> dose?</label>
+            <input type="datetime-local" id="ibuprofenLastDose" placeholder="Ibuprofen Last Dose" />
+        </div>
+        <button class="submit" type="submit">Submit</button>
+    </form>
+</div>
+
+    <div id="meds" class="tabcontent">
+        <h1>Medication Timeline</h1>
+        <div id="timeline" class="timeline" style="display: none;"></div>
+    </div>
+
+<div id="Help" class="tabcontent">
+    <h1>Help</h1>
+    <p style="font-size: 18px; color: #ff7043;">
+        Welcome to the Medication Reminder App! Follow the instructions below to get started:
+    </p>
+
+    <h2>Adding Medications</h2>
+    <ul>
+        <li>
+            Click the <strong>Add Paracetamol</strong> and/or <strong>Add Ibuprofen</strong> button on the
+            <strong>Medications</strong> tab to enter the details for a specific medication.
+        </li>
+        <li>
+            Select the date and time of the last dose using the provided input field.
+        </li>
+    </ul>
+
+    <h2>Submitting and Viewing Schedule</h2>
+    <ul>
+        <li>
+            Once you've added the details for one or both medications, click <strong>Submit</strong> to save your
+            entries.
+        </li>
+        <li>
+            Navigate to the <strong>Schedule</strong> tab to view a detailed timeline of the next doses for each
+            medication.
+        </li>
+    </ul>
+
+    <h2>Understanding the Timeline</h2>
+    <ul>
+        <li>
+            The timeline shows a clear breakdown of when each medication should be given, ensuring you don't miss a
+            dose.
+        </li>
+        <li>
+            Past doses are marked with a <strong>strikethrough</strong> for easy differentiation.
+        </li>
+    </ul>
+
+    <h2>Resetting or Editing</h2>
+    <ul>
+        <li>
+            If you need to change the schedule, go back to the <strong>Medications</strong> tab and enter the updated
+            details.
+        </li>
+        <li>
+            Submit the form again to refresh the timeline.
+        </li>
+    </ul>
+</div>
+
+    <div id="About" class="tabcontent">
+        <h1>About</h1>
+        <p style="font-size: 18px; color: #ff7043;">Who we are and what we do.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
